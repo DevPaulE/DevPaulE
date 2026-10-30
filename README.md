@@ -19,6 +19,7 @@ when to stop.
 |---|---|
 | **[rewardhack-probe](https://github.com/DevPaulE/rewardhack-probe)** | Detect when an agent tampers with its own scoring mechanism — built from Eli Chen's (AI Fund) *harness engineering* talk. |
 | **[verify-loop](https://github.com/DevPaulE/verify-loop)** | A bounded RSI verification loop: queue → probe → human answers → external judge scores 0.0–1.0 → approve/deny/teach-me → ledger. |
+| **[operator-automation-case-study](https://github.com/DevPaulE/operator-automation-case-study)** | A live client automation — and what the gate caught. The operator's voice is the brand, so the system drafts and the human sends. |
 | **[pi-durable-news-agent](https://github.com/DevPaulE/pi-durable-news-agent)** | Proactive agent: sweeps 28 sources, ranks by jev (Hype/Facts/Signal), survives restarts. Fork with a decision record. |
 | **[durable-pi](https://github.com/DevPaulE/durable-pi)** | Durable agent network — the device owns the run, clients only watch and steer. |
 | **[daily-sky](https://github.com/DevPaulE/daily-sky)** | Computed-facts astrology surface: ephemeris positions never invented, symbols never generated. |
@@ -27,6 +28,21 @@ when to stop.
 ---
 
 ## The reasoning traces
+
+### operator-automation-case-study
+*An agent for a shop whose owner's voice is the brand.*
+
+My first paid-adjacent client engagement: a Telegram operator bot and an
+invoice → follow-up automation for a real, non-technical business owner (SV Auto Pros,
+San Jose). The constraint was not technical.
+
+- **Safety as product.** The bot never messages customers. It drafts, the operator sends.
+  Enforced in code, not settings, because settings get flipped and code doesn't.
+- **The gate author never built the feature.** A RED-first acceptance gate written by a
+  different vendor's model than the builder's, with evals growing 226 → 389. The failing
+  run is the evidence, not the passing one.
+- **PII never enters git.** Rendered customer artifacts are gitignored by explicit
+  decision, so the repo is shareable without leaking anyone's information.
 
 ### rewardhack-probe
 *Detect when an agent changes the definition of done.*
