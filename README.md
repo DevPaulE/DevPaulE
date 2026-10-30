@@ -106,8 +106,8 @@ score**, and a human holds direction-setting.
 - **Specify → build → verify.** Every feature starts with a gate (a red test first), built by
   one agent, gated by another. The gate author never builds; the builder never gates.
 - **Evidence over pedigree.** No corporate background. I started building agentic systems two
-years ago; everything on this page is verified, tested, and documented, and the judgment
-calls are in the traces above. The work is the credential.
+  years ago; everything on this page is verified, tested, and documented, and the judgment
+  calls are in the traces above. The work is the credential.
 - **Owned infrastructure.** My agentic systems run on my Mac and a headless Mac mini. No SaaS
   dependency for execution — the loop is mine.
 - **Forks are attributed and accountable.** Where I build on another's work, the original is
